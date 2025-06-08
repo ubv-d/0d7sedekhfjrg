@@ -3,18 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>. ..</title>
+    <title>...</title>
+    <script>
+        let dots = 0;
+        setInterval(() => {
+            dots = (dots + 1) % 4;
+            document.title = " " + ".".repeat(dots);
+        }, 500);
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <video controls autoplay style="width:100%; height:100%;">
-        <source src="mmexport1749322553201.mp4" type="video/mp4">
-        您的浏览器不支持 HTML5 视频。
-    </video>
-
-    <script>
+    <div class="video-container">
+        <!-- 替换VIDEO_ID为实际视频ID -->
+        <iframe src="mmexport1749322553201.mp4" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen></iframe>   	
+	<script>
         setTimeout(function() {
             window.location.href = "https://qm.qq.com/q/V08aNmtBWc"; // 替换为目标网址
         }, 7000); // 7000毫秒=7秒
     </script>
+	</div>
 </body>
 </html>
