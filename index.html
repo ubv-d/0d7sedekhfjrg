@@ -29,7 +29,35 @@
             height: 100%;
             border: none;
         }
+		
+        #watermark {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: rgba(255,255,255,0.5);
+            transform-origin: center;
+            animation: rotate 6s linear infinite;
+            pointer-events: none;
+            user-select: none;
+            z-index: 9999;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
+</head>
+<body>
+    <!-- 你的网页内容 -->
+    <div id="watermark">内容字体</div>
+
+    <script>
+        // 可以动态修改水印文字
+        document.getElementById('watermark').textContent = "看完视频进入深夜群";
+    </script>
+
 </head>
 <body>
     <div class="video-container">
